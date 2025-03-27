@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Single Image</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Upload a Single Image</h1>
+    <form action="/upload_images" method="post" enctype="multipart/form-data">
+    <label for="images">Select Images:</label>
+    <input type="file" id="images" name="images" multiple accept="image/*">
+    <br><br>
+    <button type="submit">Upload and Process</button>
+</form>

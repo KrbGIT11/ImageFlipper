@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Multiple Images</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Upload Multiple Images</h1>
+    <form action="/upload_images" method="post" enctype="multipart/form-data" style="text-align: center;">
+        <label for="images">Choose Images:</label>
+        <input type="file" name="images" id="images" multiple accept="image/*">
+        <br><br>
+        <button type="submit">Process Images</button>
+    </form>
+</body>
+</html>

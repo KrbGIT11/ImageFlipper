@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Images</title>
+    <style>
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .image-item {
+            text-align: center;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Select Images to Save</h1>
+    <form action="/save_images" method="post" style="text-align: center;">
+        <label for="folder_name">Enter Folder Name (leave blank to save to "default"):</label>
+        <input type="text" id="folder_name" name="folder_name">
+        <br><br>
+        <div class="image-grid">
+            {% for image in images %}
+            <div class="image-item">
+                <img src="{{ image }}" alt="Processed Image">
+                <br>
+                <input type="checkbox" name="selected_images" value="{{ image }}"> Select
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+        <button type="submit">Save Selected Images</button>
+    </form>
+</body>
+</html>

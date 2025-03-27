@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Folder</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Upload a Folder</h1>
+    <form action="/upload_folder" method="post" enctype="multipart/form-data">
+    <input type="file" name="folder" webkitdirectory multiple>
+    <br><br>
+    <button type="submit">Process Folder</button>
+</form>
+</body>
+</html>
